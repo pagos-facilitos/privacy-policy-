@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — Facilito</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #F5F5F8;
+      color: #0B0F1E;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #0E33FF;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    header .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    header .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: #fff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header .logo-icon span {
+      width: 14px;
+      height: 14px;
+      background: #0E33FF;
+      border-radius: 4px;
+      display: block;
+    }
+
+    header .logo-text {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+    }
+
+    header .updated {
+      margin-top: 6px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 12px rgba(11,15,30,0.06);
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0E33FF;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 18px;
+      background: #0E33FF;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0B0F1E;
+      margin: 18px 0 8px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #4A5068;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    li {
+      font-size: 14px;
+      color: #4A5068;
+      margin-bottom: 6px;
+    }
+
+    li strong {
+      color: #0B0F1E;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    th {
+      background: #E8ECFF;
+      color: #0E33FF;
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 14px;
+    }
+
+    th:first-child { border-radius: 8px 0 0 0; }
+    th:last-child  { border-radius: 0 8px 0 0; }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #EDEEF2;
+      color: #4A5068;
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: #FAFAFA; }
+
+    .chip {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      background: #E8ECFF;
+      color: #0E33FF;
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+
+    .no-collect {
+      background: #E6FBF5;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-top: 10px;
+    }
+
+    .no-collect p {
+      margin: 0;
+      color: #00C48C;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .no-collect ul {
+      margin: 8px 0 0;
+    }
+
+    .no-collect li {
+      color: #00A67E;
+    }
+
+    .contact-box {
+      background: #E8ECFF;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+
+    .contact-box p {
+      margin: 0;
+      color: #0B0F1E;
+    }
+
+    .contact-box a {
+      color: #0E33FF;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .third-party {
+      border: 1px solid #EDEEF2;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .third-party-item {
+      padding: 14px 18px;
+      border-bottom: 1px solid #EDEEF2;
+    }
+
+    .third-party-item:last-child { border-bottom: none; }
+
+    .third-party-item strong {
+      display: block;
+      font-size: 14px;
+      color: #0B0F1E;
+      margin-bottom: 4px;
+    }
+
+    .third-party-item p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .third-party-item a {
+      color: #0E33FF;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: #8A90A0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon"><span></span></div>
+    <span class="logo-text">facilito</span>
+  </div>
+  <h1>Política de Privacidad</h1>
+  <p class="updated">Última actualización: junio de 2025</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Información general</h2>
+    <p>
+      Facilito es una aplicación móvil que muestra tasas de cambio de divisas en tiempo real
+      (USD, USDT, EUR) frente al bolívar venezolano. Esta política explica qué información
+      recopilamos, cómo la usamos y cómo la protegemos.
+    </p>
+    <p>
+      Al usar Facilito, usted acepta las prácticas descritas en este documento.
+    </p>
+  </section>
+
+  <section>
+    <h2>Información que recopilamos</h2>
+
+    <h3>Información que usted nos proporciona</h3>
+    <ul>
+      <li><strong>Nombre de usuario</strong> — al crear su cuenta</li>
+      <li><strong>Correo electrónico</strong> — para autenticación y envío de códigos de verificación (OTP)</li>
+      <li><strong>Contraseña</strong> — almacenada de forma cifrada mediante hash criptográfico. Nunca almacenamos su contraseña en texto plano.</li>
+    </ul>
+
+    <h3>Información generada por el uso de la app</h3>
+    <ul>
+      <li><strong>Alertas de tasa</strong> — los umbrales de precio que usted configura para recibir notificaciones</li>
+      <li><strong>Preferencias de usuario</strong> — configuraciones como notificaciones, actualización automática y modo sin conexión</li>
+      <li><strong>Token de dispositivo</strong> — identificador técnico necesario para enviar notificaciones push, proporcionado por Expo Push Notifications</li>
+      <li><strong>Tokens de sesión</strong> — tokens de acceso y refresco para mantener su sesión activa de forma segura</li>
+    </ul>
+
+    <div class="no-collect">
+      <p>Lo que NO recopilamos</p>
+      <ul>
+        <li>Datos de ubicación geográfica</li>
+        <li>Acceso a cámara, micrófono ni contactos</li>
+        <li>Datos de uso o analítica de comportamiento</li>
+        <li>Cookies ni rastreadores de terceros</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cómo usamos su información</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Dato</th>
+          <th>Uso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Correo electrónico</td>
+          <td>Verificación de cuenta (OTP) y recuperación de contraseña</td>
+        </tr>
+        <tr>
+          <td>Nombre de usuario</td>
+          <td>Identificación dentro de la aplicación</td>
+        </tr>
+        <tr>
+          <td>Contraseña (hash)</td>
+          <td>Autenticación segura</td>
+        </tr>
+        <tr>
+          <td>Token de dispositivo</td>
+          <td>Envío de alertas de tasa configuradas por usted</td>
+        </tr>
+        <tr>
+          <td>Alertas y preferencias</td>
+          <td>Personalización de la experiencia en la app</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px;">
+      No utilizamos su información para publicidad, ni la vendemos o compartimos con fines comerciales.
+    </p>
+  </section>
+
+  <section>
+    <h2>Servicios de terceros</h2>
+    <p>Utilizamos los siguientes servicios para el funcionamiento de la app:</p>
+    <div class="third-party">
+      <div class="third-party-item">
+        <strong>Expo Push Notifications</strong>
+        <p>Servicio de entrega de notificaciones push. Su token de dispositivo se transmite a los servidores de Expo exclusivamente para enviarle las alertas que usted configure.</p>
+        <a href="https://expo.dev/privacy" target="_blank">Ver política de privacidad de Expo →</a>
+      </div>
+      <div class="third-party-item">
+        <strong>Resend</strong>
+        <p>Servicio de envío de correos transaccionales para la entrega de códigos OTP. Solo se transmite su dirección de correo y el código generado.</p>
+        <a href="https://resend.com/legal/privacy-policy" target="_blank">Ver política de privacidad de Resend →</a>
+      </div>
+    </div>
+    <p style="margin-top:14px;">No compartimos su información con ningún otro tercero.</p>
+  </section>
+
+  <section>
+    <h2>Almacenamiento y seguridad</h2>
+    <ul>
+      <li>Los datos se almacenan en servidores seguros con acceso restringido.</li>
+      <li>Las contraseñas se protegen con hash <strong>bcrypt</strong>.</li>
+      <li>Las sesiones se gestionan mediante tokens <strong>JWT</strong> de corta duración y tokens de refresco revocables.</li>
+      <li>La comunicación entre la app y nuestros servidores se realiza siempre mediante <strong>HTTPS</strong>.</li>
+      <li>Los tokens de sesión sensibles se almacenan en el área segura del dispositivo (<strong>SecureStore</strong>).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Retención de datos</h2>
+    <ul>
+      <li>Su cuenta y datos asociados se conservan mientras la cuenta esté activa.</li>
+      <li>Puede solicitar la eliminación de su cuenta y todos sus datos en cualquier momento escribiéndonos al correo de contacto.</li>
+      <li>Los tokens de sesión expirados se eliminan automáticamente.</li>
+      <li>Los tokens de dispositivo se eliminan cuando usted cierra sesión o desinstala la aplicación.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sus derechos</h2>
+    <p>Usted tiene derecho a:</p>
+    <ul>
+      <li><strong>Acceder</strong> a los datos que tenemos sobre usted</li>
+      <li><strong>Corregir</strong> su nombre de usuario o correo electrónico desde la configuración de la app</li>
+      <li><strong>Eliminar</strong> su cuenta y todos sus datos asociados</li>
+      <li><strong>Revocar</strong> el acceso a notificaciones push desde la configuración de su dispositivo</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Menores de edad</h2>
+    <p>
+      Facilito no está dirigida a menores de 13 años. No recopilamos intencionalmente
+      información de menores. Si usted es padre o madre y cree que su hijo ha proporcionado
+      información personal, contáctenos para eliminarla de inmediato.
+    </p>
+  </section>
+
+  <section>
+    <h2>Cambios a esta política</h2>
+    <p>
+      Podemos actualizar esta política ocasionalmente. Le notificaremos sobre cambios
+      significativos mediante un aviso en la aplicación. La fecha de "Última actualización"
+      al inicio del documento siempre reflejará la versión vigente.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+    <p>Si tiene preguntas sobre esta política o desea ejercer sus derechos:</p>
+    <div class="contact-box">
+      <p><strong>Correo electrónico:</strong> <a href="mailto:tu-email@dominio.com">tu-email@dominio.com</a></p>
+      <p style="margin-top:6px;"><strong>Organización:</strong> Pagos Facilitos</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Facilito · Pagos Facilitos · Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
