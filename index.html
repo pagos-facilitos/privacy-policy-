@@ -255,7 +255,7 @@
     <span class="logo-text">facilito</span>
   </div>
   <h1>Política de Privacidad</h1>
-  <p class="updated">Última actualización: junio de 2025</p>
+  <p class="updated">Última actualización: junio de 2026</p>
 </header>
 
 <main>
@@ -264,8 +264,9 @@
     <h2>Información general</h2>
     <p>
       Facilito es una aplicación móvil que muestra tasas de cambio de divisas en tiempo real
-      (USD, USDT, EUR) frente al bolívar venezolano. Esta política explica qué información
-      recopilamos, cómo la usamos y cómo la protegemos.
+      (USD, USDT, EUR) frente al bolívar venezolano, y permite a las cuentas de tipo Negocio
+      crear y compartir catálogos de productos con precios en bolívares calculados automáticamente.
+      Esta política explica qué información recopilamos, cómo la usamos y cómo la protegemos.
     </p>
     <p>
       Al usar Facilito, usted acepta las prácticas descritas en este documento.
@@ -280,6 +281,15 @@
       <li><strong>Nombre de usuario</strong> — al crear su cuenta</li>
       <li><strong>Correo electrónico</strong> — para autenticación y envío de códigos de verificación (OTP)</li>
       <li><strong>Contraseña</strong> — almacenada de forma cifrada mediante hash criptográfico. Nunca almacenamos su contraseña en texto plano.</li>
+      <li><strong>Tipo de cuenta</strong> — <em>Personal</em> o <em>Negocio</em>, seleccionado al registrarse. Determina las funcionalidades disponibles.</li>
+    </ul>
+
+    <h3>Información del catálogo (solo cuentas Negocio)</h3>
+    <ul>
+      <li><strong>Nombre de tienda</strong> — nombre público de su negocio dentro de la app</li>
+      <li><strong>Moneda ancla</strong> — divisa de referencia para calcular precios (USD BCV, USD USDT o EUR)</li>
+      <li><strong>Productos del catálogo</strong> — nombre, precio, descripción e imagen de cada producto que usted cree. Estos datos se almacenan localmente en su dispositivo.</li>
+      <li><strong>Visibilidad del catálogo</strong> — si usted activa el catálogo público, su nombre de tienda y productos serán visibles para otros usuarios de la app.</li>
     </ul>
 
     <h3>Información generada por el uso de la app</h3>
@@ -294,9 +304,10 @@
       <p>Lo que NO recopilamos</p>
       <ul>
         <li>Datos de ubicación geográfica</li>
-        <li>Acceso a cámara, micrófono ni contactos</li>
+        <li>Acceso al micrófono ni a contactos</li>
         <li>Datos de uso o analítica de comportamiento</li>
         <li>Cookies ni rastreadores de terceros</li>
+        <li>Imágenes de la galería sin su acción explícita (la cámara/galería solo se accede cuando usted toca "Agregar imagen" en un producto)</li>
       </ul>
     </div>
   </section>
@@ -331,6 +342,18 @@
           <td>Alertas y preferencias</td>
           <td>Personalización de la experiencia en la app</td>
         </tr>
+        <tr>
+          <td>Tipo de cuenta</td>
+          <td>Habilitar funcionalidades de catálogo para cuentas Negocio</td>
+        </tr>
+        <tr>
+          <td>Datos de catálogo (Negocio)</td>
+          <td>Mostrar su catálogo público a otros usuarios cuando usted lo activa; calcular precios en bolívares en tiempo real</td>
+        </tr>
+        <tr>
+          <td>Imágenes de productos</td>
+          <td>Mostrar fotos de sus productos en su catálogo. Se almacenan localmente en su dispositivo.</td>
+        </tr>
       </tbody>
     </table>
     <p style="margin-top:14px;">
@@ -352,6 +375,11 @@
         <p>Servicio de envío de correos transaccionales para la entrega de códigos OTP. Solo se transmite su dirección de correo y el código generado.</p>
         <a href="https://resend.com/legal/privacy-policy" target="_blank">Ver política de privacidad de Resend →</a>
       </div>
+      <div class="third-party-item">
+        <strong>WhatsApp (función compartir catálogo)</strong>
+        <p>Al usar "Compartir por WhatsApp", la app abre WhatsApp con un enlace preformado a su catálogo. No se comparte ningún dato personal con WhatsApp; la acción depende de que usted tenga la app instalada y confirme el envío.</p>
+        <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank">Ver política de privacidad de WhatsApp →</a>
+      </div>
     </div>
     <p style="margin-top:14px;">No compartimos su información con ningún otro tercero.</p>
   </section>
@@ -359,11 +387,13 @@
   <section>
     <h2>Almacenamiento y seguridad</h2>
     <ul>
-      <li>Los datos se almacenan en servidores seguros con acceso restringido.</li>
+      <li>Los datos de cuenta se almacenan en servidores seguros con acceso restringido.</li>
       <li>Las contraseñas se protegen con hash <strong>bcrypt</strong>.</li>
       <li>Las sesiones se gestionan mediante tokens <strong>JWT</strong> de corta duración y tokens de refresco revocables.</li>
       <li>La comunicación entre la app y nuestros servidores se realiza siempre mediante <strong>HTTPS</strong>.</li>
       <li>Los tokens de sesión sensibles se almacenan en el área segura del dispositivo (<strong>SecureStore</strong>).</li>
+      <li>Los productos de su catálogo se almacenan actualmente de forma local en su dispositivo (<strong>AsyncStorage</strong>). No se sincronizan con el servidor hasta que usted active su catálogo público.</li>
+      <li>Las imágenes de productos permanecen en su dispositivo y no se cargan a ningún servidor externo.</li>
     </ul>
   </section>
 
@@ -385,6 +415,8 @@
       <li><strong>Corregir</strong> su nombre de usuario o correo electrónico desde la configuración de la app</li>
       <li><strong>Eliminar</strong> su cuenta y todos sus datos asociados</li>
       <li><strong>Revocar</strong> el acceso a notificaciones push desde la configuración de su dispositivo</li>
+      <li><strong>Controlar la visibilidad</strong> de su catálogo — puede activar o desactivar el catálogo público en cualquier momento desde Ajustes → Configuración del catálogo</li>
+      <li><strong>Eliminar productos</strong> de su catálogo directamente desde la pantalla Catálogo</li>
     </ul>
   </section>
 
@@ -410,7 +442,7 @@
     <h2>Contacto</h2>
     <p>Si tiene preguntas sobre esta política o desea ejercer sus derechos:</p>
     <div class="contact-box">
-      <p><strong>Correo electrónico:</strong> <a href="mailto:tu-email@dominio.com">tu-email@dominio.com</a></p>
+      <p><strong>Correo electrónico:</strong> <a href="mailto:haroomg@gmail.com">haroomg@gmail.com</a></p>
       <p style="margin-top:6px;"><strong>Organización:</strong> Pagos Facilitos</p>
     </div>
   </section>
@@ -418,7 +450,7 @@
 </main>
 
 <footer>
-  <p>© 2025 Facilito · Pagos Facilitos · Todos los derechos reservados</p>
+  <p>© 2026 Facilito · Pagos Facilitos · Todos los derechos reservados</p>
 </footer>
 
 </body>
